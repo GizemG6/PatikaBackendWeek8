@@ -3,10 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Proje Hakkında</title>
+    <link rel="stylesheet" href="~/css/style.css">
 </head>
 <body>
-    <h1>About Us</h1>
-    <p>This is the about page of your MVC application.</p>
+
+    <div class="about-container">
+        <!-- Title -->
+        <h1>Ben Kimim</h1>
+
+        <!-- Introduction Text -->
+        <p class="intro">
+            Selam ben Gizem. Yeni teknolojileri keşfetmeyi, sorunları çözmeyi ve yaratıcı projeler inşa etmeyi seven tutkulu bir yazılımcıyım.
+        </p>
+
+        <!-- Random Image -->
+        <img src="~/image/image.gif" alt="gizem" class="profile-image">
+
+        <!-- About of Project -->
+        <div class="about-me">
+            <h2>Projenin Amacı</h2>
+            <p>
+                Bu projede Asp.Net Empty Projesi oluşturup bu projeyi MVC tasarım desenine uygun bir şekilde doldurdum.
+            </p>
+            <p>
+                Aşağıda  Controller - Action - Model -  View - Razor - RazorView - 
+                wwwroot kavramlarının ve builder.Build() - app.Run() metotlarının ne işe yaradıklarını,  hangi amaçla kullanıldıklarını
+                açıkladım.
+            </p>
+        </div>
+        <h1>ASP.NET Core MVC Kavramları Açıklamaları</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kavram</th>
+                    <th>Açıklama</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Controller</td>
+                    <td>
+                        - Kullanıcıdan gelen istekleri (request) işleyen ve yanıt (response) döndüren sınıflardır.<br>
+                        - Genellikle bir URL isteği bir controller ve action metoduna yönlendirilir.<br>
+                        - Örnek: HomeController.cs dosyasında bulunan Index() metodu gibi.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Action</td>
+                    <td>
+                        - Controller sınıfındaki bir metottur ve her action bir HTTP isteğine karşılık gelir.<br>
+                        - Örnek: public IActionResult Index() gibi.<br>
+                        - Bu metodlar genellikle bir View döner veya veri işlemlerini gerçekleştirir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Model</td>
+                    <td>
+                        - Uygulamadaki veriyi ve bu verinin nasıl işleneceğini temsil eder.<br>
+                        - Veritabanındaki tablolarla eşleşen sınıflar veya bir formdan gelen veriyi tutan sınıflar olabilir.<br>
+                        - Örnek: User.cs dosyası bir kullanıcı modelidir ve kullanıcı bilgilerini içerir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>View</td>
+                    <td>
+                        - Kullanıcıya gösterilecek olan HTML sayfalarıdır.<br>
+                        - Genellikle veriyi kullanıcıya göstermek için kullanılır ve Razor (.cshtml) dosyaları ile oluşturulur.<br>
+                        - Örnek: Index.cshtml dosyası, HomeController'dan döndürülen bir View olabilir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Razor</td>
+                    <td>
+                        - ASP.NET Core tarafından kullanılan bir şablon motorudur.<br>
+                        - C# kodu ile HTML kodunu birleştirerek dinamik web sayfaları oluşturmayı sağlar.<br>
+                        - Örnek: "Model.FirstName" ifadesi Razor kullanarak model verisini HTML sayfasında gösterebilir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Razor View</td>
+                    <td>
+                        - Razor şablon motoru kullanılarak oluşturulan .cshtml uzantılı dosyalardır.<br>
+                        - Bu dosyalar kullanıcıya HTML çıktısı döner.<br>
+                        - Örnek: Views/Home/Index.cshtml dosyası bir Razor View'dir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>wwwroot</td>
+                    <td>
+                        - Uygulamanın statik dosyalarını barındıran klasördür.<br>
+                        - Bu klasörde CSS, JavaScript, resim dosyaları vb. bulunur.<br>
+                        - Kullanıcılar bu dosyalara doğrudan erişebilir.<br>
+                        - Örnek: wwwroot/css/style.css bir CSS dosyasıdır ve tarayıcı tarafından yüklenebilir.
+                    </td>
+                </tr>
+                <tr>
+                    <td>builder.Build()</td>
+                    <td>
+                        - Web uygulaması yapılandırmasını tamamlar ve uygulamayı başlatılabilir hale getirir.<br>
+                        - Tüm servislerin yapılandırılması (Dependency Injection) ve routing ayarları bu aşamaya kadar tamamlanır.<br>
+                        - `builder.Build()` çağrısı yapıldıktan sonra servis eklenemez, çünkü artık yapı tamamlanmıştır.
+                    </td>
+                </tr>
+                <tr>
+                    <td>app.Run()</td>
+                    <td>
+                        - Uygulamanın HTTP isteklerini dinlemeye ve yanıt vermeye başlamasını sağlar.<br>
+                        - `app.Run()` çağrısı uygulamanın çalıştırılma döngüsünü başlatır ve sonlandırıcı (terminating) middleware'dir.<br>
+                        - Bu metottan sonra herhangi bir middleware eklenemez, çünkü uygulama çalışmaya başlamıştır.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- Contact Button -->
+        <div class="contact">
+            <a href="mailto:0.gizemgunes@gmail.com">Contact Me</a>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/gizm01/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/GizemG6" target="_blank">GitHub</a>
+        </div>
+    </div>
+
 </body>
 </html>

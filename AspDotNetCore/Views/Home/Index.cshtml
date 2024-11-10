@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <style>
+        body
+        {
+            background-color: #444bff;
+        }
+        /* title style */
+        h1 {
+            text-align: center;
+            color: #cce6ff;
+            margin-top: 50px;
+        }
+
+        /* text style */
+        p {
+            text-align: center;
+            color: #cce6ff;
+            font-size: 18px;
+        }
+
+        /* layout of the page */
+        .container {
+            background-color: #444bff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* button style */
+        .btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+            .btn:hover {
+                background-color: #45a049;
+            }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Home Page!</h1>
-    <p>This is the index page of your MVC application.</p>
+    <div class="container">
+        <h1>Hoşgeldin!</h1>
+        <p>Patika mavisiyle bir hoşgeldin :)</p>
+        <a href="@Url.Action("About", "Home")" class="btn">Proje Hakkında</a>
+    </div>
 </body>
 </html>

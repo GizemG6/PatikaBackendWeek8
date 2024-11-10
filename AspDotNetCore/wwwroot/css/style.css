@@ -1,0 +1,141 @@
+﻿
+/* background page */
+body {
+    background-color: #444bff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* container */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* title */
+h1 {
+    text-align: center;
+    color: #444bff;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Promotional text */
+.intro {
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Image/Gif */
+.profile-image {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #444bff;
+}
+
+/* About */
+.about-me {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-top: 30px;
+}
+/* Table style */
+table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table title style */
+th {
+    background-color: #444bff;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Table cells */
+td {
+    background-color: #99ccff;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Background color for sequence number */
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Table title alignment */
+thead th {
+    text-align: center;
+}
+
+/* Title surrounding the table */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    margin-top: 50px;
+}
+
+    .contact a {
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: white;
+        background-color: #45a049;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact a:hover {
+            background-color: #45a049;
+        }
+
+/* Social Media Links */
+.social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .social-links a {
+        text-decoration: none;
+        font-size: 24px;
+        margin: 0 10px;
+        color: #555;
+        transition: color 0.3s ease;
+    }
+
+        .social-links a:hover {
+            color: #ccffcc;
+        }
+

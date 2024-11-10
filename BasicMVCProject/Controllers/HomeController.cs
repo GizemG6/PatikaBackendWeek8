@@ -27,7 +27,7 @@ namespace BasicMVCProject.Controllers
                 new Order { Id = 3, ProductName = "JBL Tour One M2", Price = 10.679M, Quantity = 1 }
             };
 
-            // create Custo
+            // create customer order view model
             var viewModel = new CustomerOrderViewModel
             {
                 Customer = customer,
