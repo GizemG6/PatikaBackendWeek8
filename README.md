@@ -21,9 +21,13 @@ Basic MVC Project
 Görev: Müşteri ve Sipariş Bilgilerini Görüntüleme
 
 Adım adım işlemler:
+
 •Customer ve Order modelleri oluşturma
+
 •CustomerOrderViewModel oluşturma
-•Controoler oluşturma
+
+•Controller oluşturma
+
 •View oluşturma
 
 Sayfanın görüntüsü
