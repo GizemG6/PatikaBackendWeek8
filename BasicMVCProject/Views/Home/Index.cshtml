@@ -1,0 +1,90 @@
+﻿@model BasicMVCProject.Models.ViewModels.CustomerOrderViewModel
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müşteri ve Sipariş Bilgileri</title>
+    <style>
+        /* customer card style */
+        .customer-card {
+            background-color: #f7f9fc; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+            .customer-card h2 {
+                color: #4CAF50; 
+                margin-bottom: 15px;
+            }
+
+            .customer-card p {
+                margin: 5px 0;
+                font-size: 16px;
+            }
+
+                .customer-card p strong {
+                    color: #333;
+                }
+        /* background and style for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #f0f8ff;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Müşteri Bilgileri</h1>
+    <div class="customer-card">
+        <h2>Müşteri Bilgileri</h2>
+        <p><strong>ID:</strong> @Model.Customer.Id</p>
+        <p><strong>Ad:</strong> @Model.Customer.FirstName</p>
+        <p><strong>Soyad:</strong> @Model.Customer.LastName</p>
+        <p><strong>E-posta:</strong> @Model.Customer.Email</p>
+    </div>
+
+    <h2>Siparişler</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Sipariş ID</th>
+                <th>Ürün Adı</th>
+                <th>Fiyat(tl)</th>
+                <th>Miktar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model.Orders)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.ProductName</td>
+                    <td>@order.Price</td>
+                    <td>@order.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
